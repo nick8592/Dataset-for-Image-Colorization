@@ -1,6 +1,3 @@
-# pip install clip-interrogator
-# https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_cli.py
-#!/usr/bin/env python3
 import argparse
 import csv
 import os
