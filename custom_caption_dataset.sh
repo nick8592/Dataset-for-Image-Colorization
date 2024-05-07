@@ -1,8 +1,4 @@
-# # Generate captions specific for "Stable Diffusion 2".
-# export IMAGE_FOLDER="val2017"
-# export OUTPUT_FOLDER="coco_captions_sdv2"
-# export OUTPUT_FILENAME="val2017"
-
+# Generate captions specific for "Stable Diffusion 2".
 export IMAGE_FOLDER="train2017"
 export OUTPUT_FOLDER="coco_captions_sdv2"
 export OUTPUT_FILENAME="train2017"
@@ -16,10 +12,7 @@ python captions_generator.py \
     --output_filename=$OUTPUT_FILENAME
 
 
-# # Filter dataset to remove unlikely words from generated captions.
-# export INPUT_FILE="/home/nick/Documents/code/control-color/coco_captions_sdv2/val2017.csv"
-# export OUTPUT_FILE="/home/nick/Documents/code/control-color/coco_captions_sdv2/val2017_r.csv"
-
+# Filter dataset to remove unlikely words from generated captions.
 export INPUT_FILE="/home/nick/Documents/code/control-color/coco_captions_sdv2/train2017.csv"
 export OUTPUT_FILE="/home/nick/Documents/code/control-color/coco_captions_sdv2/train2017_r.csv"
 
@@ -28,11 +21,6 @@ python csv_filter.py \
     --output_file=$OUTPUT_FILE
 
 # # Push custom caption dataset to Hugginface
-# export DATASET='nickpai/coco2017-colorization'
-# export CAPTIONS_PATH="coco_captions_sdv2/val2017_r.csv"
-# export SPLIT="validation"
-# export REVISION="custom-caption"
-
 export DATASET='nickpai/coco2017-colorization'
 export CAPTIONS_PATH="coco_captions_sdv2/train2017_r.csv"
 export SPLIT="train"
