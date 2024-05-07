@@ -1,12 +1,9 @@
 # map custom captions result with original dataset
-
 import random
 import argparse
 import pandas as pd
 from tqdm import tqdm
 from datasets import load_dataset
-from huggingface_hub import login
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', 
@@ -45,5 +42,4 @@ print("Modifying captions in the dataset:")
 castom_caption_dataset = dataset.map(choose_sentence)
 
 # Push the modified datasets to the Hugging Face Hub with new split names
-login()
 castom_caption_dataset.push_to_hub(args.dataset, revision=args.revision)
