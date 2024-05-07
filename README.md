@@ -1,7 +1,6 @@
 # Dataset Preparation and Augmentation for Image Colorization
 
-This repository contains Python scripts for preparing and augmenting the COCO 2017 dataset for image colorization tasks. The `download_dataset.sh` script downloads the dataset, followed by `dataset_filter.py` which refines the dataset by removing images with low color variation. Then, `dataset_prepare.py` filters removed images and pushes modified datasets to Hugging Face Hub. Finally, `augment_captions.py` adds randomized colorization prompts to captions, enhancing dataset diversity.
-
+This repository contains Python scripts for preparing and augmenting the COCO 2017 dataset for image colorization tasks. The `download_dataset.sh` script downloads the dataset, followed by `dataset_filter.py` which refines the dataset by removing images with low color variation. Then, `dataset_prepare.py` filters removed images and pushes modified datasets to Hugging Face Hub.
 ## Requirements
 
 1. Download the COCO 2017 dataset by running `download_dataset.sh`.
